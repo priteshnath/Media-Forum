@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom'; // Import useNavigate
 // import { GoogleLogin } from '@react-oauth/google';
 // import { jwtDecode } from "jwt-decode";
 import { useGoogleLogin } from '@react-oauth/google';
+import Navbar from '../Components/Navbar';
 
 
 
@@ -14,6 +15,7 @@ const RegisterPage = () => {
         handleSubmit,
         formState: { errors, isSubmitting },
         reset,
+        watch,
     } = useForm();
 
     // Google auth Logic
@@ -48,6 +50,7 @@ const RegisterPage = () => {
     };
     return (
         <>
+            <Navbar />
             <div className="min-h-screen flex items-center justify-center bg-gray-100">
                 <div className="bg-white p-8 rounded shadow-md w-[70%]">
                     <h2 className="text-2xl font-bold mb-6 text-center">Registration Form</h2>
@@ -123,7 +126,7 @@ const RegisterPage = () => {
                         </div>
 
                         {/* Pan Card Upload */}
-                        {/* <div>
+                        <div>
                             <label className="block mb-1 font-semibold text-start">
                                 Pan Card Upload<span className='text-red-500'>*</span>
                             </label>
@@ -134,10 +137,10 @@ const RegisterPage = () => {
                                 className="w-full border border-gray-300 p-2 rounded focus:outline-none focus:border-blue-500"
                             />
                             {errors.panCard && <p className="text-red-500">{errors.panCard.message}</p>}
-                        </div> */}
+                        </div>
 
                         {/* Aadhar Card Upload */}
-                        {/* <div>
+                        <div>
                             <label className="block mb-1 font-semibold text-start">
                                 Aadhar Card Upload<span className='text-red-500'>*</span>
                             </label>
@@ -148,56 +151,46 @@ const RegisterPage = () => {
                                 className="w-full border border-gray-300 p-2 rounded focus:outline-none focus:border-blue-500"
                             />
                             {errors.aadharCard && <p className="text-red-500">{errors.aadharCard.message}</p>}
-                        </div> */}
+                        </div>
 
                         {/* Password Field */}
                         <div className="relative">
-                            {/* Label for Password */}
                             <label className="block mb-1 font-semibold text-start">
                                 Password<span className='text-red-500'>*</span>
                             </label>
-
-                            {/* Input for Password */}
                             <div className="relative">
                                 <input
-                                    type={showPassword ? "text" : "password"} // Toggle between text and password based on the eye icon click
+                                    type={showPassword ? "text" : "password"}
                                     {...register('password', {
                                         required: 'Password is required',
-                                        minLength: { value: 6, message: 'Password must be at least 6 characters' }, // Validation for min length
+                                        minLength: { value: 6, message: 'Password must be at least 6 characters' },
                                     })}
                                     placeholder="Enter Password"
                                     className="w-full border border-gray-300 p-2 pr-10 rounded focus:outline-none focus:border-blue-500"
                                     autoComplete="new-password"
                                 />
-
-                                {/* Eye Icon for Show/Hide Password */}
                                 <span
-                                    className="absolute right-3 top-2 cursor-pointer" // Positioning the icon at the right of the input
-                                    onClick={() => setShowPassword(!showPassword)} // Toggle show/hide password
+                                    className="absolute right-3 top-2 cursor-pointer"
+                                    onClick={() => setShowPassword(!showPassword)}
                                 >
                                     {showPassword ? (
-                                        <i className="ri-eye-line"></i> // Remix icon for eye (show password)
+                                        <i className="ri-eye-line"></i>
                                     ) : (
-                                        <i className="ri-eye-off-line"></i> // Remix icon for eye-off (hide password)
+                                        <i className="ri-eye-off-line"></i>
                                     )}
                                 </span>
                             </div>
-
-                            {/* Display error for password field */}
                             {errors.password && <p className="text-red-500">{errors.password.message}</p>}
                         </div>
 
                         {/* Confirm Password Field */}
                         <div className="relative">
-                            {/* Label for Confirm Password */}
                             <label className="block mb-1 font-semibold text-start">
                                 Confirm Password<span className='text-red-500'>*</span>
                             </label>
-
-                            {/* Input for Confirm Password */}
                             <div className="relative">
                                 <input
-                                    type={showConfirmPassword ? "text" : "password"} // Toggle between text and password based on the eye icon click
+                                    type={showConfirmPassword ? "text" : "password"}
                                     {...register('confirmPassword', {
                                         required: 'Confirm Password is required',
                                         validate: (value) =>
@@ -207,22 +200,20 @@ const RegisterPage = () => {
                                     className="w-full border border-gray-300 p-2 pr-10 rounded focus:outline-none focus:border-blue-500"
                                     autoComplete="new-password"
                                 />
-
-                                {/* Eye Icon for Show/Hide Confirm Password */}
                                 <span
-                                    className="absolute right-3 top-2 cursor-pointer" // Positioning the icon at the right of the input
-                                    onClick={() => setShowConfirmPassword(!showConfirmPassword)} // Toggle show/hide confirm password
+                                    className="absolute right-3 top-2 cursor-pointer"
+                                    onClick={() => setShowConfirmPassword(!showConfirmPassword)}
                                 >
                                     {showConfirmPassword ? (
-                                        <i className="ri-eye-line"></i> // Remix icon for eye (show confirm password)
+                                        <i className="ri-eye-line"></i>
                                     ) : (
-                                        <i className="ri-eye-off-line"></i> // Remix icon for eye-off (hide confirm password)
+                                        <i className="ri-eye-off-line"></i>
                                     )}
                                 </span>
                             </div>
-                            {/* Display error for confirm password field */}
                             {errors.confirmPassword && <p className="text-red-500">{errors.confirmPassword.message}</p>}
                         </div>
+
 
 
                         {/* Buttons */}
