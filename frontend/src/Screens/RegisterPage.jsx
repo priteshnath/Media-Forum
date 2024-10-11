@@ -296,7 +296,7 @@ const RegisterPage = () => {
                         <div className="flex space-x-4 justify-center">
                             <button
                                 type="submit"
-                                className="bg-blue-500 w-32 rounded text-white p-2 hover:bg-blue-600"
+                                className={`bg-blue-500 ${isSubmitting ? 'bg-blue-400 hover:bg-blue-400' : ''} w-32 rounded text-white p-2 hover:bg-blue-600`}
                                 disabled={isSubmitting}
                             >
                                 {isSubmitting ? "Submitting" : "Submit"}
