@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useForm } from 'react-hook-form';
 import { useNavigate } from 'react-router-dom';
-import { useGoogleLogin } from '@react-oauth/google';
 import Navbar from '../Components/Navbar';
 import Select from 'react-select'; // Import react-select
 // import stateCityData from './'; // Import the JSON file
@@ -24,16 +23,6 @@ const RegisterPage = () => {
     // const [stateOptions, setStateOptions] = useState([]); // State options
     // const [cityOptions, setCityOptions] = useState([]); // City options based on selected state
     // const [stateCityData, setStateCityData] = useState(null); // Store entire JSON data
-
-
-
-
-
-
-    // Google OAuth Logic
-    const login = useGoogleLogin({
-        onSuccess: tokenResponse => console.log(tokenResponse),
-    });
 
     // Function to check if the user is 18 years or older
     const isAdult = (dob) => {
@@ -404,8 +393,6 @@ const RegisterPage = () => {
                     </form>
                 </div>
             </div>
-            <hr />
-            <button onClick={() => login()}>Sign in with Google 🚀</button>
         </>
     );
 };
