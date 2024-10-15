@@ -3,8 +3,9 @@ import { useNavigate } from 'react-router-dom'; // For navigation
 import { FaUser, FaLock } from 'react-icons/fa'; // Icons for User and Password
 import { AiFillEye, AiFillEyeInvisible } from 'react-icons/ai'; // Eye icons
 import { Link } from 'react-router-dom';
+import '../app.css';
 
-const Login = () => {
+const Login = ({prop}) => {
   const [username, setUsername] = useState(''); // State for username
   const [password, setPassword] = useState(''); // State for password
   const [showPassword, setShowPassword] = useState(false); // State to toggle password visibility
@@ -27,9 +28,9 @@ const Login = () => {
   };
 
   return (
-    <div className="flex items-center justify-center min-h-fit py-20">
-      <div className="bg-white p-8 shadow-lg rounded w-full max-w-md">
-        <h1 className="text-3xl font-bold text-center mb-6">Login</h1>
+    <div className="flex items-center justify-center min-h-fit pt-20 pb-10">
+      <div className="bg-white p-8 shadow-all rounded w-full max-w-md">
+        <h1 className={`text-4xl ${prop ? prop.fontColor : ""} font-bold ${prop ? prop.textalign : 'text-center'} mb-10`}>LOGIN</h1>
 
         {/* Username Input */}
         <div className="flex items-center border border-gray-300 rounded mb-4 p-2">

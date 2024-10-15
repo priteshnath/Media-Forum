@@ -9,14 +9,9 @@ const Navbar = () => {
     };
 
     return (
-        <nav className="bg-[#343a40] text-white">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <nav className="bg-[#1f2937] text-white sticky top-0">
+            <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex justify-between items-center h-16">
-                    {/* Logo Section */}
-                    <div className="flex items-center">
-                        <span className="text-lg font-bold">KK. Education</span>
-                    </div>
-
                     {/* Hamburger Icon for Mobile */}
                     <div className="flex items-center sm:hidden">
                         <button onClick={toggleMenu} className="text-white focus:outline-none">
@@ -39,8 +34,17 @@ const Navbar = () => {
                         <Link to="/contact" className="block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-700">
                             Contact
                         </Link>
+                        <Link to="/plan" className="block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-700">
+                            PLAN
+                        </Link>
+                        <Link to="/legal-document" className="block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-700">
+                            Legal Document
+                        </Link>
                         <Link to="/login" className="block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-700">
                             Login
+                        </Link>
+                        <Link to="/accountPage" className="block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-700">
+                            My Account
                         </Link>
                     </div>
                 </div>
@@ -50,7 +54,7 @@ const Navbar = () => {
             <div className={`sm:hidden ${isOpen ? 'block' : 'hidden'} bg-gray-800`}>
                 <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
                     <div className="flex flex-col space-y-1">
-                        <Link to="/" className="block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-700">
+                        <Link to="/home" className="block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-700">
                             Home
                         </Link>
                         <Link to="/about" className="block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-700">
@@ -59,8 +63,17 @@ const Navbar = () => {
                         <Link to="/contact" className="block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-700">
                             Contact
                         </Link>
+                        <Link to="/plan" className="block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-700">
+                            PLAN
+                        </Link>
+                        <Link to="/legal-document" className="block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-700">
+                            Legal Document
+                        </Link>
                         <Link to="/login" className="block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-700">
                             Login
+                        </Link>
+                        <Link to="/accountPage" className="block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-700">
+                            My Account
                         </Link>
                     </div>
                 </div>
