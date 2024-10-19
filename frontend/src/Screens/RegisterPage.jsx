@@ -1,7 +1,10 @@
 import { useState, useEffect } from 'react';
 import { useForm } from 'react-hook-form';
 import { useNavigate } from 'react-router-dom';
+import IntroBanner from '../Components/IntroBanner';
 import Navbar from '../Components/Navbar';
+import Footer from '../Components/Footer';
+import GoToTopButton from '../Components/GoToTopButton';
 import Select from 'react-select'; // Import react-select
 // import stateCityData from './'; // Import the JSON file
 
@@ -115,6 +118,7 @@ const RegisterPage = () => {
 
     return (
         <>
+            <IntroBanner />
             <Navbar />
             <div className="min-h-screen flex items-center justify-center bg-gray-100">
                 <div className="bg-white p-8 rounded-2xl shadow-lg w-[70%] m-10">
@@ -393,6 +397,8 @@ const RegisterPage = () => {
                     </form>
                 </div>
             </div>
+            <GoToTopButton />
+            <Footer />
         </>
     );
 };

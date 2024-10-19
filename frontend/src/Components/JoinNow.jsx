@@ -26,7 +26,7 @@ const JoinNow = () => {
         </div>
         <div className='w-1/2 flex items-center justify-center'>
           <img 
-            src="/Photos/JoinNowImg.jpg" 
+            src="/Photos/Plan/3Plan.jpg" 
             alt="Join Now Image" 
             className="w-[90%] h-auto" // Ensure it takes full width of its parent
           />

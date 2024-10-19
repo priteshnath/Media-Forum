@@ -9,7 +9,7 @@ const MyAccountSideBar = () => {
     const toggleReports = () => setReportsOpen(!isReportsOpen);
 
     return (
-        <div className="w-64 h-full bg-blue-600 text-white p-4">
+        <div className="w-80 h-full bg-[#1f2937] text-white p-4">
             {/* Sidebar content here */}
             <h1 className="text-lg font-bold">Dashboard</h1>
             {/* Other sidebar items */}

@@ -27,7 +27,7 @@ const Authority = () => {
             <img 
               src={src} 
               alt={`Authority ${index + 1}`} 
-              className="object-contain w-full max-w-sm h-auto rounded-lg shadow-lg" 
+              className="object-contain w-full max-w-sm h-auto shadow-lg" 
             />
           </div>
         ))}
