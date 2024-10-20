@@ -5,10 +5,12 @@ import MyAccountProfile from '../Components/MyAccountProfile';
 import MyAccountSideBar from '../Components/MyAccountSideBar';
 import MyAccountCard from '../Components/MyAccountCard';
 import GoToTopButton from '../Components/GoToTopButton';
+import IntroBanner from '../Components/IntroBanner';
 
 const AccountPage = () => {
   return (
     <div className="flex flex-col h-screen">
+      <IntroBanner />
       <Navbar />
       <div className="flex flex-grow">
         {/* Sidebar with fixed width */}
