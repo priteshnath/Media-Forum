@@ -13,14 +13,10 @@ const AccountPage = () => {
     <div className="flex flex-col h-screen">
       <IntroBanner />
       <Navbar />
-      <div className="flex flex-grow">
-        {/* Sidebar with fixed width */}
+      <div className="flex flex-grow"> {/* Add margin-top to accommodate the sticky navbar */}
         <MyAccountSideBar />
 
-        {/* Main content section with flexible width */}
         <div className="flex-grow p-4">
-
-          {/* Profile */}
           <h1 className="text-4xl font-bold text-gray-600 text-left mb-8">
             My Account
           </h1>
@@ -29,9 +25,7 @@ const AccountPage = () => {
           <h1 className="text-4xl font-bold text-gray-600 text-left mt-10">
             Dashboard
           </h1>
-          {/* Card Section */}
           <div className="mt-6">
-            {/* First row with 4 columns */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
               <MyAccountCard
                 number="83"
@@ -58,7 +52,6 @@ const AccountPage = () => {
               />
             </div>
 
-            {/* Second row with 2 columns */}
             <div className="flex flex-col md:flex-row md:space-x-2 mt-4">
               <MyAccountCard
                 number="9,500.00INR"
@@ -75,8 +68,13 @@ const AccountPage = () => {
             </div>
           </div>
 
-          <div className='w-full flex items-center justify-center mt-10'>
-            <CardGenerator />
+          <div className='w-full flex items-center justify-center'>
+            <div className='w-full'>
+              <h1 className="text-4xl font-bold text-gray-600 text-left my-10">
+                My Card
+              </h1>
+              <CardGenerator />
+            </div>
           </div>
         </div>
       </div>
