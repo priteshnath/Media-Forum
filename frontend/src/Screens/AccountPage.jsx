@@ -6,6 +6,7 @@ import MyAccountSideBar from '../Components/MyAccountSideBar';
 import MyAccountCard from '../Components/MyAccountCard';
 import GoToTopButton from '../Components/GoToTopButton';
 import IntroBanner from '../Components/IntroBanner';
+import CardGenerator from '../Components/CardGenerator';
 
 const AccountPage = () => {
   return (
@@ -73,7 +74,10 @@ const AccountPage = () => {
               />
             </div>
           </div>
-          
+
+          <div className='w-full flex items-center justify-center mt-10'>
+            <CardGenerator />
+          </div>
         </div>
       </div>
       <GoToTopButton />
